@@ -44,6 +44,3 @@ jobs:
 
       - name: Run unit tests
         run: python -m unittest test_prime_number.py
-
-      - name: Run function call
-        run: python prime_number.py
