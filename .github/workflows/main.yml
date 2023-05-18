@@ -19,8 +19,14 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
 
-      - name: Run unit tests
-        run: python test_prime_number.py
+      - name: Download prime_number.py
+        run: wget https://raw.githubusercontent.com/nhakobyan685/unitets/main/prime_number.py
 
-#       - name: Run function call
-#         run: python prime_number.py
+      - name: Download test_prime_number.py
+        run: wget https://raw.githubusercontent.com/nhakobyan685/unitets/main/test_prime_number.py
+
+      - name: Run unit tests
+        run: python -m unittest test_prime_number.py
+
+      - name: Run function call
+        run: python prime_number.py
