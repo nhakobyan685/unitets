@@ -1,27 +1,4 @@
-# name: Unit Tests
-
-# on:
-#   push:
-#     branches:
-#       - main
-#   pull_request:
-#     branches:
-#       - main
-
-# jobs:
-#   test:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Checkout code
-#         uses: actions/checkout@v2
-#       - name: Print list files in current directory
-#         run : ls
-#       - name: Set up Python
-#         uses: actions/setup-python@v2
-#       - name: Run unit tests
-#         run: python3 test_prime_number.py
-
-name: Unit Tests and Function Call
+name: Unit Tests
 
 on:
   push:
@@ -34,13 +11,12 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
+      - name: Print list files in current directory
+        run : ls
       - name: Set up Python
         uses: actions/setup-python@v2
-
       - name: Run unit tests
-        run: python -m unittest test_prime_number.py
+        run: python3 test_prime_number.py
